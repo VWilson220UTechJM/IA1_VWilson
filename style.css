@@ -1,0 +1,202 @@
+:root {
+    	--primary-color: #FF00FF;
+    	--secondary-color: #800080;
+    	--dark-color: #000000;
+	--light-color: #FFFFFF;
+	--bgd-color: #FF99FF;
+    	--font-main: Arial, Helvetica, sans-serif;
+      }
+
+body {
+	margin: 0; 
+	font-family: var(--font-main);
+	background-color: var(--bgd-color);
+
+     }
+		
+header {
+	overflow: hidden; 
+	background-color: var(--dark-color);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 40px;
+	margin: 0;
+	border-bottom: 2px solid var(--primary-color);
+	}
+
+header img { 
+	width: 20px; 
+	height:20px; 
+	border-radius: 50%;
+	margin-right: 20px;
+	}
+
+
+header h4 { 
+	margin: 0;
+	}
+
+nav a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 12px;
+	border-radius: 6px;
+        }
+
+nav a:hover {
+            	background-color: var(--secondary-color);
+            	color: black;
+        }
+
+nav a.active {
+            	background-color: var(--primary-color);
+            	color: white;	
+        }
+
+.flex-container {
+  		display: flex; 
+  		justify-content: center;
+  		align-items: center; 
+  		padding: 5px;
+		}
+
+
+section {
+	padding: 40px 20px;
+     }
+
+.section-title { 
+		margin-top: 0;
+		background-color: var(--dark-color);			
+		color: white;
+		display: inline;
+		padding: 5px;
+		border-radius: 6px;
+	}
+
+p {
+	margin-bottom: 1px;
+  }
+
+#aboutme {
+	padding: 40px 20px;
+	margin: 0;
+	border-bottom: 2px solid var(--primary-color);
+	}
+
+.personality-cards {
+	margin-top: 10px;
+    	display: flex;
+    	flex-wrap: wrap;
+    	gap: 20px;
+    	justify-content: center;
+	}
+
+#personality .card {
+    background-color: var(--secondary-color);
+}
+
+#resume {
+	padding: 20px 20px;
+	margin: 0;
+	border-bottom: 2px solid var(--primary-color);
+	}
+
+#contact {
+	padding: 40px 20px;
+	margin: 0;
+	border-bottom: 2px solid var(--primary-color);
+	}
+
+#vision-mission {
+    	display: flex;
+    	flex-direction: row;
+    	gap: 20px;
+    	justify-content: center;
+	}
+
+.card {
+	background-color: var(--dark-color);		
+        color: white;
+	width: 300px; 
+	transition: 0.3s;
+        text-align: left;
+      	padding: 10px;	
+	border-radius: 6px;
+	margin-top: 0;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);	
+   }
+
+.card:hover {
+  	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
+	}
+
+.re-body {
+    background-color: var(--light-color);
+    color: black;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.about-flex {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+		
+footer {
+	background-color: var(--dark-color);
+	color: white;
+	align-items: center;
+        padding: 10px;
+	display: flex;
+	justify-content: space-between;
+       	 }
+
+@media (max-width: 599px) {
+     nav a {
+        font-size: 0.75rem;
+	padding: 4px 7px;
+    }
+
+     .card {
+		width: 100%; 
+		box-sizing: border-box;	
+   	}
+
+     footer {
+		flex-direction: column;
+       	}
+}
+
+@media (min-width:600px) {
+	.flex-container{
+		flex-direction: column;
+	}
+
+	header {
+		padding: 5px 20px;
+		flex-wrap: wrap;
+	}
+
+}
+
+@media (min-width:950px) {
+	.flex-container{
+		flex-direction: row;
+	}
+
+	header {
+		padding: 15px 40px;
+		flex-wrap: nowrap;
+	}
+
+	#vision-mission .card{
+    		width: 100%;
+	}
+}
